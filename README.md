@@ -18,3 +18,5 @@ Este problema deriva en:
     1. El principal objetivo de este proyecto es el de desrrollar una aplicacion para la administración de los prestamos realizados, brindando las funcionalidades necesarias para la emision, la busqueda y la devolucion de los mismos.
     2. Brindar las funcionalidades necesarias para el registro, la busqueda y modificación de los objetos, asi como tambien facilitar las tareas de inventariado y seguimiento de estos.
     3. Brindar las funcionalidades necesarias para el registro, la busqueda y modificacion de las personas que interactuan con la aplicación, siendo estos los **Secretarios**, que emiten los prestamos y los **Alumnos** y **Profesores** que reciben los prestamos emitidos.
+
+    
