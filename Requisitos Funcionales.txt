@@ -1,0 +1,94 @@
+**Requisitos referentes al registro, busqueda y modificacion de una persona.**
+Todas las personas que interactuaran con el sistema deben poder cumplir uno de los siguientes roles: Alumno, Profesor, Secretario.
+
+RF01: El sistema deberá permitir registrar una persona. Los datos necesarios para hacerlo son: 
+	* nombre : string  *obligatorio*
+	* apellido : string * obligatorio *
+	* fechaNacimiento : DateTime *obligatorio*
+	* dni : string *obligatorio*
+	* ciudadNatal : string //ciudad en la que nacio la persona.
+	* ciudadActual : string //ciudad en la que esta viviendo actualmente.
+	* telefonoContacto : string _obligatorio_
+	* correoElectronico : string //correo electronico personal o de trabajo. _obligatorio_
+RF02: El sistema deberá permitir asignar el rol Alumno a una persona. Los datos necesarios para hacerlo son:
+	* idRol : string
+	* legajo : string _obligatorio_
+	* carrera : string _obligatorio_
+RF03: El sistema deberá permitir asignar el rol Profesor a una persona. Los datos necesarios para hacerlo son: 
+	* idRol : string
+	* legajo : string _obligatorio_
+	* carrera : string _obligatorio_
+	* materia : string _obligatorio_
+RF04: El sistema deberá permitir asignar el rol Secretario a una persona que ya posea el rol Alumno dentro de los posibles roles que puede cumplir. Los datos necesarios para hacerlo son:
+	* idRol : string
+	* cargo : string _obligatorio_
+RF05: El sistema deberá permitir buscar una persona. Para eso se deberá utilizar el campo DNI como clave de busqueda.
+RF06: El sistema deberá permitir buscar una persona que pueda cumplir con el rol Alumno. Para eso se deberá utilizar el campo Legajo del alumno como clave de busqueda.
+RF07: El sistema deberá permitir buscar una persona que pueda cumplir con el rol Profesor. Para eso se deberá utilizar el campo Legajo del profesor como clave de busqueda.
+RF08: El sistema deberá permitir buscar una persona que pueda cumplir con el rol Secretario. Para eso se deberá utilizar el campo Secretaria del cargo como clave de busqueda.
+RF09: El sistema deberá permitir modificar los datos de una persona, tanto sus datos como los datos de los roles que puede cumplir.
+
+**Requisitos referentes al registro de materiales.**
+Los materiales son los objetos que se pueden prestar.
+
+RF10: El sistema deberá permitir registrar una Calculadora. Los datos necesarios para hacerlo son:
+	* idMaterial : string
+	* codigo : int
+	* modelo : string
+	* color : string
+	* observaciones : textbox?
+	* disponible : boolean
+RF11: El sistema deberá permitir registrar un Cargador Portatil. Los datos necesarios para hacerlo son:
+	* idMaterial : string
+	* codigo : int
+	* modelo : string
+	* color : string 
+	* capacidadCarga : double (se mide en amperios)
+	* observacioens : textbox?
+	* disponible : boolean
+RF12: El sistema deberá permitir registrar una Zapatilla (enchufes). Los datos necesarios para hacerlo son:
+	* idMaterial : string
+	* codigo : int
+	* cantidadEnchufes : int
+	* observaciones : textbox?
+	* disponible : boolean
+RF13: El sistema deberá permitir registrar un Equipo de Mate. Un equipo de mate esta compuesto por un Mate, una Bombilla y un Termo.
+	* idMaterial : string
+	* codigo : int
+	* Mate : Mate
+	* Bombilla : Bombilla
+	* Termo : Termo
+	* Observaciones : textbox?
+	* disponible : boolean
+	Las partes que componene el equipo de mate deben poder prestarse por separado.
+RF14: El sistema deberá permitir registrar un Mate. Los datos necesarios para hacerlo son: 
+	* idMaterial : string
+	* codigo : int
+	* observaciones : textbox
+	* disponible : boolean
+RF15: El sistema deberá permitir registrar una Bombilla. Los datos necesarios para hacerlo son: 
+	* idMaterial : string
+	* codigo : int
+	* observaciones : textbox
+	* disponible : boolean
+RF16: El sistema deberá permitir registrar un Termo. Los datos necesarios para hacerlo son:
+	* idMaterial : string
+	* codigo : int
+	* color : string
+	* capacidadLitros : double
+	* observaciones : textbox?
+	* disponible : boolean
+
+**Requisitos referentes al registro, modificacion y consulta de los prestamos de los materiales a personas.**
+RF17: El sistema deberá permitir registrar un Prestamo. Los datos necesarios para hacerolo son:
+	* idPrestamo : int
+	* material : Material
+	* Alumno/Profesor : Persona capaz de cumplir el rol alumno o profesor.
+	* secretario : Persona capaz de cumplir el rol secretario.
+	* fechaEmision : DateTime //Fecha en la que se presto el material a la persona.
+	* fechaDevolucionEstimada: DateTime //Fecha limite para la devolucion del material.
+	* fechaDevolucionReal : DateTime //Fecha en la que la persona devolvio el material prestado.
+	* Observaciones : textbox?
+RF18: El sistema deberá permitir buscar un prestamo. Para eso deberá utilizar el campo idPrestamo como clave de busqueda.
+RF19: El sistema deberá permitir modificar el campo "observaciones", dejando un registro del dia y la hora de la modificacion. Una vez finalizado el prestamo (devuelto el material), no se podran realizar modificaciones.
+RF20: El sistema deberá permitir cancelar un prestamo, añadiendo una observacion al campo "observaciones" indicando el motivo de la cancelacion.
