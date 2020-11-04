@@ -4,13 +4,13 @@ Todas las personas que interactuaran con el sistema deben poder cumplir uno de l
 RF01: El sistema deberá permitir registrar una persona. Los datos necesarios para hacerlo son: 
 	* nombre : string  *obligatorio*
 	* apellido : string * obligatorio *
-	* fechaNacimiento : DateTime *obligatorio*
-	* dni : string *obligatorio*
+	* fechaNacimiento : DateTime 
+	* dni : string 
 	* ciudadNatal : string //ciudad en la que nacio la persona.
 	* ciudadActual : string //ciudad en la que esta viviendo actualmente.
 	* telefonoContacto : string _obligatorio_
 	* correoElectronico : string //correo electronico personal o de trabajo. _obligatorio_
-RF02: El sistema deberá permitir asignar el rol Alumno a una persona. Los datos necesarios para hacerlo son:
+RF02: El sistema deberá permitir asignar el rol Estudiante a una persona. Los datos necesarios para hacerlo son:
 	* idRol : string
 	* legajo : string _obligatorio_
 	* carrera : string _obligatorio_
