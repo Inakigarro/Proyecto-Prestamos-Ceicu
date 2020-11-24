@@ -1,7 +1,9 @@
 # Prestamos CEICU.
 
 Bienvenidos a mi primer repositorio público de *Git Hub*. Aquí estaré subiendo todos los archivos relacionados al proyecto de desarrollo
-de una aplicación para el Centro de Estudiantes de Ingeniería de Concepción del Uruguay (CEICU) de la Universidad Tecnológica Nacional (UTN) Facultad Regional Concepción del Uruguay.
+de una aplicación para el Centro de Estudiantes de Ingeniería de Concepción del Uruguay (CEICU) de la Universidad Tecnológica Nacional (UTN) Facultad Regional Concepción del Uruguay(FRCU).
+
+Este proyecto no esta impulsado por CEICU ni por la FRCU. El nombre es provisorio y puede cambiar en el futuro.
 
 ## Introducción.
 El CEICU cuenta con un servicio de préstamos de objetos para que los alumnos utilicen. Al día de hoy el formato utilizado para registrar los prestamos es en planillas impresas en papel y almacenadas en carpetas. Hay una serie de planillas para cada tipo de objeto que se puede prestar. Las que son completadas se guardan en folios comunes y estos a su vez en una única carpeta. Cuando una planilla se llena, se revisa si hay prestamos registrados que todavía no hayan sido devueltos y en tal caso, ésta no se archiva hasta que todos los prestamos registrados estén devueltos. Este proceso no siempre se cumple, ya que muchas veces en el apuro de registrar un nuevo préstamo, se guardan las planillas sin revisar. Lo que dificulta el seguimiento de los préstamos y de los objetos prestados. 
