@@ -4,27 +4,30 @@ Todas las personas que interactuaran con el sistema deben poder cumplir uno de l
 RF01: El sistema deberá permitir registrar una persona. Los datos necesarios para hacerlo son: 
 	* nombre : string  *obligatorio*
 	* apellido : string * obligatorio *
-	* fechaNacimiento : DateTime 
-	* dni : string 
 	* ciudadActual : string //ciudad en la que esta viviendo actualmente. 
 	* telefonoContacto : string _obligatorio_
 	* correoElectronico : string //correo electronico personal o de trabajo. _obligatorio_
-RF02: El sistema deberá permitir asignar el rol Estudiante a una persona. Los datos necesarios para hacerlo son:
-	* idRol : string
+
+RF02: El sistema deberá permitir registrar a un Alumno. Para hacerlo se necesitaran registrar todos los datos referentes a la Persona y ademas:
 	* legajo : string _obligatorio_
 	* carrera : string _obligatorio_
-RF03: El sistema deberá permitir asignar el rol Profesor a una persona. Los datos necesarios para hacerlo son: 
-	* idRol : string
+	* secretario : Secretario 
+
+RF03: El sistema deberá permitir registrar a un Profesor. Para hacerlo se necesitaran registrar todos los datos referentes a la Persona y ademas:
 	* legajo : string _obligatorio_
-	* carrera : string _obligatorio_
 	* materia : string _obligatorio_
-RF04: El sistema deberá permitir asignar el rol Secretario a una persona que ya posea el rol Alumno dentro de los posibles roles que puede cumplir. Los datos necesarios para hacerlo son:
-	* idRol : string
+	
+RF04: El sistema deberá permitir registrar a un Secretario. Para hacerlo, la Persona debe ser un Alumno y se registraran los siguientes datos:
 	* cargo : string _obligatorio_
+
 RF05: El sistema deberá permitir buscar una persona. Para eso se deberá utilizar el campo DNI como clave de busqueda.
+
 RF06: El sistema deberá permitir buscar una persona que pueda cumplir con el rol Alumno. Para eso se deberá utilizar el campo Legajo del alumno como clave de busqueda.
+
 RF07: El sistema deberá permitir buscar una persona que pueda cumplir con el rol Profesor. Para eso se deberá utilizar el campo Legajo del profesor como clave de busqueda.
+
 RF08: El sistema deberá permitir buscar una persona que pueda cumplir con el rol Secretario. Para eso se deberá utilizar el campo Secretaria del cargo como clave de busqueda.
+
 RF09: El sistema deberá permitir modificar los datos de una persona, tanto sus datos como los datos de los roles que puede cumplir.
 
 **Requisitos referentes al registro de materiales.**
