@@ -1,0 +1,17 @@
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.csprojAssemblyReference.cache
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.Properties.Resources.resources
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.csproj.GenerateResource.cache
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.csproj.CoreCompileInputs.cache
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\bin\Debug\ProyectoPrestamosCEICU.exe.config
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\bin\Debug\ProyectoPrestamosCEICU.exe
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\bin\Debug\ProyectoPrestamosCEICU.pdb
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\bin\Debug\EntityFramework.dll
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\bin\Debug\EntityFramework.xml
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.csproj.CopyComplete
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.exe
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.pdb
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.VentanaPrincipal.resources
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.Ventanas.VentanaAdministracionAlumnos.resources
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.Ventanas.VentanaAgregarAlumno.resources
