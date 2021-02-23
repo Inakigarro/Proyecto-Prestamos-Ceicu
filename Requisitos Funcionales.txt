@@ -38,7 +38,7 @@ RF10: El sistema deberá permitir registrar una Calculadora. Los datos necesario
 	* codigo : int
 	* modelo : string
 	* color : string
-	* observaciones : textbox?
+	* observaciones : textbox
 	* disponible : boolean
 RF11: El sistema deberá permitir registrar un Cargador Portatil. Los datos necesarios para hacerlo son:
 	* idMaterial : string
@@ -46,40 +46,37 @@ RF11: El sistema deberá permitir registrar un Cargador Portatil. Los datos nece
 	* modelo : string
 	* color : string 
 	* capacidadCarga : double (se mide en amperios)
-	* observacioens : textbox?
+	* observacioens : textbox
 	* disponible : boolean
 RF12: El sistema deberá permitir registrar una Zapatilla (enchufes). Los datos necesarios para hacerlo son:
 	* idMaterial : string
 	* codigo : int
 	* cantidadEnchufes : int
-	* observaciones : textbox?
+	* observaciones : textbox
 	* disponible : boolean
-RF13: El sistema deberá permitir registrar un Equipo de Mate. Un equipo de mate esta compuesto por un Mate, una Bombilla y un Termo.
-	* idMaterial : string
-	* codigo : int
-	* Mate : Mate
-	* Bombilla : Bombilla
-	* Termo : Termo
-	* Observaciones : textbox?
-	* disponible : boolean
-	Las partes que componene el equipo de mate deben poder prestarse por separado.
-RF14: El sistema deberá permitir registrar un Mate. Los datos necesarios para hacerlo son: 
+RF13: El sistema deberá permitir registrar un Mate. Los datos necesarios para hacerlo son: 
 	* idMaterial : string
 	* codigo : int
 	* observaciones : textbox
 	* disponible : boolean
-RF15: El sistema deberá permitir registrar una Bombilla. Los datos necesarios para hacerlo son: 
+RF14: El sistema deberá permitir registrar una Bombilla. Los datos necesarios para hacerlo son: 
 	* idMaterial : string
 	* codigo : int
 	* observaciones : textbox
 	* disponible : boolean
-RF16: El sistema deberá permitir registrar un Termo. Los datos necesarios para hacerlo son:
+RF15: El sistema deberá permitir registrar un Termo. Los datos necesarios para hacerlo son:
 	* idMaterial : string
 	* codigo : int
 	* color : string
 	* capacidadLitros : double
-	* observaciones : textbox?
+	* observaciones : textbox
 	* disponible : boolean
+RF16: El sistema deberá permitir registrar un Casco. Los datos necesarios para hacerlo son:
+	* idMaterial: string
+	* codigo: int
+	* color: string
+	* Observaciones: textbox
+
 
 **Requisitos referentes al registro, modificacion y consulta de los prestamos de los materiales a personas.**
 RF17: El sistema deberá permitir registrar un Prestamo. Los datos necesarios para hacerolo son:
