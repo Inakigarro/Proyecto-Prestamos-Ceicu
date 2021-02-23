@@ -34,7 +34,11 @@ El objetivo principal del proyecto es desarrollar una aplicación que brinde las
         * Calculadoras.
         * Cargadores.
         * Zapatillas.
-        * Mates, Bombillas y Termos.
+        * Mates. 
+        * Bombillas. 
+        * Termos.
+        * Cascos.
+        * Paraguas.
     
     Los demas objetos estaran especificados en los requisitos funcionales.
 ### ¿Por cuanto tiempo se van a prestar?
