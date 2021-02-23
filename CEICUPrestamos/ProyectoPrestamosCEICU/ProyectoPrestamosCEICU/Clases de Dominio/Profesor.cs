@@ -19,6 +19,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
         private string aMateria;
 
         //Constructor de la clase.
+        public Profesor() : base() { }
         public Profesor(string pNombre, string pApellido, string pCiudadActual, string pDireccion, string pTelefono, string pCorreo, string pLegajo, string pMateria)
             : base(pNombre, pApellido, pCiudadActual, pDireccion, pTelefono, pCorreo)
         {

@@ -17,6 +17,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
         private Secretario aSecretario;
 
         //Constructores de la clase.
+        public Alumno() : base() { }
         public Alumno(string pNombre, string pApellido, string pCiudadActual, string pDireccion, string pTelefono, string pCorreo, string pLegajo, string pCarrera)
             :base(pNombre, pApellido, pCiudadActual, pDireccion, pTelefono, pCorreo)
         {

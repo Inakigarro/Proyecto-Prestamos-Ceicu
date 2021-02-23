@@ -20,6 +20,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
         private string aCorreo;
 
         //Constructores de la clase.
+        public Persona() { }
         public Persona(string pNombre, string pApellido, string pCiudadActual, string pDireccion, string pTelefono, string pCorreo)
         {
             aNombre = pNombre;

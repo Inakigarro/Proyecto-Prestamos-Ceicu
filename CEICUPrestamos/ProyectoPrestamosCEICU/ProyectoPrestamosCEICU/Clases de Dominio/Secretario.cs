@@ -18,6 +18,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
         private string aSecretaria;
 
         //Constructores de la clase.
+        public Secretario() { }
         public Secretario(string pSecretaria)
         {
             aSecretaria = pSecretaria;

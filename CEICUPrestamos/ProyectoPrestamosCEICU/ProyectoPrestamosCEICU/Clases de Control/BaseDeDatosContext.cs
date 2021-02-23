@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoPrestamosCEICU.Clases_de_Control
 {
-    class BaseDeDatosContext : DbContext
+    public class BaseDeDatosContext : DbContext
     {
         //Constructor de la clase.
         public BaseDeDatosContext() : base("name=PrestamosCEICU") { }
