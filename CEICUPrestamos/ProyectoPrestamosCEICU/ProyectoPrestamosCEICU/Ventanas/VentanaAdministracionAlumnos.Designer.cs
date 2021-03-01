@@ -108,6 +108,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             this.ParametroBusquedaTb.Name = "ParametroBusquedaTb";
             this.ParametroBusquedaTb.Size = new System.Drawing.Size(549, 20);
             this.ParametroBusquedaTb.TabIndex = 6;
+            this.ParametroBusquedaTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ParametroBusquedaTb_KeyPress);
             // 
             // ListaAlumnosDGV
             // 

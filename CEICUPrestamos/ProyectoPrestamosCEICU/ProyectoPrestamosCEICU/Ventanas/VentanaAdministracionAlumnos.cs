@@ -27,6 +27,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             ventanaAgregarAlumno.Visible = true;
             
         }
+
         public void ActualizarListaAlumnos()
         {
             ListaAlumnosDGV.DataSource = null;
@@ -39,6 +40,30 @@ namespace ProyectoPrestamosCEICU.Ventanas
             ListaAlumnosDGV.DataSource = null;
             //Si el campo de texto esta vacio, muestro toda la lista de alumnos.
             if(ParametroBusquedaTb.TextLength == 0)
+            {
+                ActualizarListaAlumnos();
+            }
+            else
+            {
+                //Si esta seleccionada la opcion de legajo.
+                if (LegajoRb.Checked)
+                {
+                    ListaAlumnosDGV.DataSource = new BindingSource().DataSource = fachada.BuscarAlumnoLegajo(ParametroBusquedaTb.Text);
+                }
+                //Sino, estara seleccionado la opcion de nombre.
+                else
+                {
+                    ListaAlumnosDGV.DataSource = new BindingSource().DataSource = fachada.BuscarAlumnoNombre(ParametroBusquedaTb.Text);
+                }
+            }
+        }
+
+        private void ParametroBusquedaTb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Vacio la lista en la ventana.
+            ListaAlumnosDGV.DataSource = null;
+            //Si el campo de texto esta vacio, muestro toda la lista de alumnos.
+            if (ParametroBusquedaTb.TextLength == 0)
             {
                 ActualizarListaAlumnos();
             }

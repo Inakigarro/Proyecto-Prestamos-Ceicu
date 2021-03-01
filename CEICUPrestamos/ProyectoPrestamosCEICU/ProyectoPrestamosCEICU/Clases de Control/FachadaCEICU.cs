@@ -31,6 +31,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Control
                 }
             }
         }
+
         public void AgregarAlumno(string pNombre, string pApellido, string pCiudad, string pDireccion, string pTelefono, string pCorreo, string pLegajo, string pCarrera)
         {
             //Creo el contexto para trabajar con la base de datos.
@@ -51,6 +52,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Control
                 }
             }
         }
+        
         public List<Alumno> ListarAlumnos()
         {
             //Creo la lista de alumnos a mostrar.
@@ -76,6 +78,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Control
             //Devuelvo la lista de alumnos. Puede estar vacia.
             return listaAlumnos;
         }
+
         public List<Alumno> BuscarAlumnoLegajo (string pLegajo)
         {
             //Creo la lista de alumnos a mostrar.
@@ -89,7 +92,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Control
                     foreach (Alumno alumno in db.Alumnos)
                     {
                         //Si el legajo del alumno es igual al ingresado.
-                        if (alumno.Legajo == pLegajo)
+                        if (alumno.Legajo.Contains(pLegajo))
                         {
                             //Agrego el alumno a la lista.
                             listaAlumnos.Add(alumno);
@@ -104,6 +107,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Control
             //Devuelvo la lista de alumnos. Puede estar vacia.
             return listaAlumnos;
         }
+
         public List<Alumno> BuscarAlumnoNombre (string pNombre)
         {
             //Creo la lista de alumnos a mostrar.
@@ -116,8 +120,9 @@ namespace ProyectoPrestamosCEICU.Clases_de_Control
                     //Recorro la lista de alumnos en la base de datos.
                     foreach (Alumno alumno in db.Alumnos)
                     {
+                        string nombreApellido = alumno.Nombre + ' ' + alumno.Apellido;
                         //Si el nombre del alumno es igual al ingresado.
-                        if (alumno.Nombre == pNombre)
+                        if (nombreApellido.Contains(pNombre))
                         {
                             //Agrego el alumno a la lista.
                             listaAlumnos.Add(alumno);
@@ -132,6 +137,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Control
             //Devuelvo la lista de alumnos. Puede estar vacia.
             return listaAlumnos;
         }
+
 
         //Metodos referentes a Profesor.
         public void AgregarProfesor(Profesor pProfesor)
@@ -148,6 +154,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Control
                 }
             }
         }
+
         public void AgregarProfesor(string pNombre, string pApellido, string pCiudad, string pDireccion, string pTelefono, string pCorreo, string pLegajo, string pMateria)
         {
             using(BaseDeDatosContext db = new BaseDeDatosContext())
@@ -165,6 +172,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Control
                 }
             }
         }
+        
         public List<Profesor> ListarProfesores()
         {
             var listaProfesores = new List<Profesor>();
@@ -177,6 +185,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Control
             }
             return listaProfesores;
         }
+
         public List<Profesor> BuscarProfesorLegajo(string pLegajo)
         {
             //Creo la lista de profesores a mostrar.
@@ -190,7 +199,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Control
                     foreach (Profesor profesor  in db.Profesores)
                     {
                         //Si el legajo del profesor es igual al ingresado.
-                        if (profesor.Legajo == pLegajo)
+                        if (profesor.Legajo.Contains(pLegajo))
                         {
                             //Agrego el profesor a la lista.
                             listaProfesor.Add(profesor);
@@ -205,6 +214,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Control
             //Devuelvo la lista de profesores. Puede estar vacia.
             return listaProfesor;
         }
+
         public List<Profesor> BuscarProfesorNombre(string pNombre)
         {
             //Creo la lista de profesores a mostrar.
@@ -218,7 +228,8 @@ namespace ProyectoPrestamosCEICU.Clases_de_Control
                     foreach (Profesor profesor in db.Profesores)
                     {
                         //Si el nombre del profesor es igual al ingresado.
-                        if (profesor.Legajo == pNombre)
+                        string nombreApellido = profesor.Nombre + ' ' + profesor.Apellido;
+                        if (nombreApellido.Contains(pNombre))
                         {
                             //Agrego el profesor a la lista.
                             listaProfesor.Add(profesor);
@@ -233,6 +244,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Control
             //Devuelvo la lista de profesores. Puede estar vacia.
             return listaProfesor;
         }
+
 
         //Metodos referentes a Secretario.
         //Metodos referentes a Material.
