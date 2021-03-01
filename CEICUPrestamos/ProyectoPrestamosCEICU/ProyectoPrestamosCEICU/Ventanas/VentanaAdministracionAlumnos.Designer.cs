@@ -37,7 +37,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             this.BuscarAlumnoBtn = new System.Windows.Forms.Button();
             this.NombreRb = new System.Windows.Forms.RadioButton();
             this.LegajoRb = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ParametroBusquedaTb = new System.Windows.Forms.TextBox();
             this.ListaAlumnosDGV = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.ListaAlumnosDGV)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             this.BuscarAlumnoBtn.TabIndex = 3;
             this.BuscarAlumnoBtn.Text = "Buscar Alumno";
             this.BuscarAlumnoBtn.UseVisualStyleBackColor = true;
+            this.BuscarAlumnoBtn.Click += new System.EventHandler(this.BuscarAlumnoBtn_Click);
             // 
             // NombreRb
             // 
@@ -101,12 +102,12 @@ namespace ProyectoPrestamosCEICU.Ventanas
             this.LegajoRb.Text = "Legajo";
             this.LegajoRb.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // ParametroBusquedaTb
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(549, 20);
-            this.textBox1.TabIndex = 6;
+            this.ParametroBusquedaTb.Location = new System.Drawing.Point(7, 39);
+            this.ParametroBusquedaTb.Name = "ParametroBusquedaTb";
+            this.ParametroBusquedaTb.Size = new System.Drawing.Size(549, 20);
+            this.ParametroBusquedaTb.TabIndex = 6;
             // 
             // ListaAlumnosDGV
             // 
@@ -122,7 +123,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 450);
             this.Controls.Add(this.ListaAlumnosDGV);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ParametroBusquedaTb);
             this.Controls.Add(this.LegajoRb);
             this.Controls.Add(this.NombreRb);
             this.Controls.Add(this.BuscarAlumnoBtn);
@@ -145,7 +146,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
         private System.Windows.Forms.Button BuscarAlumnoBtn;
         private System.Windows.Forms.RadioButton NombreRb;
         private System.Windows.Forms.RadioButton LegajoRb;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ParametroBusquedaTb;
         private System.Windows.Forms.DataGridView ListaAlumnosDGV;
         private FachadaCEICU fachada = new FachadaCEICU();
     }
