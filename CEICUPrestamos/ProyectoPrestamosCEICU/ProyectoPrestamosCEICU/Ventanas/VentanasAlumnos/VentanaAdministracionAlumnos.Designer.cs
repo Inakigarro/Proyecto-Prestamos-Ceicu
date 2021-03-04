@@ -33,12 +33,13 @@ namespace ProyectoPrestamosCEICU.Ventanas
         {
             this.AgregarAlumnoBtn = new System.Windows.Forms.Button();
             this.ModificarAlumnoBtn = new System.Windows.Forms.Button();
-            this.EliminarAlumnoBtn = new System.Windows.Forms.Button();
             this.BuscarAlumnoBtn = new System.Windows.Forms.Button();
             this.NombreRb = new System.Windows.Forms.RadioButton();
             this.LegajoRb = new System.Windows.Forms.RadioButton();
             this.ParametroBusquedaTb = new System.Windows.Forms.TextBox();
             this.ListaAlumnosDGV = new System.Windows.Forms.DataGridView();
+            this.HabilitarAlumnoBtn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ListaAlumnosDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,15 +61,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             this.ModificarAlumnoBtn.TabIndex = 1;
             this.ModificarAlumnoBtn.Text = "Modificar Alumno";
             this.ModificarAlumnoBtn.UseVisualStyleBackColor = true;
-            // 
-            // EliminarAlumnoBtn
-            // 
-            this.EliminarAlumnoBtn.Location = new System.Drawing.Point(456, 12);
-            this.EliminarAlumnoBtn.Name = "EliminarAlumnoBtn";
-            this.EliminarAlumnoBtn.Size = new System.Drawing.Size(100, 25);
-            this.EliminarAlumnoBtn.TabIndex = 2;
-            this.EliminarAlumnoBtn.Text = "Eliminar Alumno";
-            this.EliminarAlumnoBtn.UseVisualStyleBackColor = true;
+            this.ModificarAlumnoBtn.Click += new System.EventHandler(this.ModificarAlumnoBtn_Click);
             // 
             // BuscarAlumnoBtn
             // 
@@ -106,29 +99,58 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // 
             this.ParametroBusquedaTb.Location = new System.Drawing.Point(7, 39);
             this.ParametroBusquedaTb.Name = "ParametroBusquedaTb";
-            this.ParametroBusquedaTb.Size = new System.Drawing.Size(549, 20);
+            this.ParametroBusquedaTb.Size = new System.Drawing.Size(811, 20);
             this.ParametroBusquedaTb.TabIndex = 6;
-            this.ParametroBusquedaTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ParametroBusquedaTb_KeyPress);
+            this.ParametroBusquedaTb.TextChanged += new System.EventHandler(this.ParametroBusquedaTb_TextChanged);
             // 
             // ListaAlumnosDGV
             // 
+            this.ListaAlumnosDGV.AllowUserToOrderColumns = true;
             this.ListaAlumnosDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListaAlumnosDGV.Location = new System.Drawing.Point(10, 68);
+            this.ListaAlumnosDGV.Location = new System.Drawing.Point(7, 65);
+            this.ListaAlumnosDGV.MultiSelect = false;
             this.ListaAlumnosDGV.Name = "ListaAlumnosDGV";
-            this.ListaAlumnosDGV.Size = new System.Drawing.Size(545, 372);
+            this.ListaAlumnosDGV.ReadOnly = true;
+            this.ListaAlumnosDGV.RowHeadersVisible = false;
+            this.ListaAlumnosDGV.RowTemplate.ReadOnly = true;
+            this.ListaAlumnosDGV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaAlumnosDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ListaAlumnosDGV.Size = new System.Drawing.Size(808, 372);
             this.ListaAlumnosDGV.TabIndex = 7;
+            // 
+            // HabilitarAlumnoBtn
+            // 
+            this.HabilitarAlumnoBtn.Location = new System.Drawing.Point(456, 12);
+            this.HabilitarAlumnoBtn.Name = "HabilitarAlumnoBtn";
+            this.HabilitarAlumnoBtn.Size = new System.Drawing.Size(100, 25);
+            this.HabilitarAlumnoBtn.TabIndex = 8;
+            this.HabilitarAlumnoBtn.Text = "Habilitar Alumno";
+            this.HabilitarAlumnoBtn.UseVisualStyleBackColor = true;
+            this.HabilitarAlumnoBtn.Click += new System.EventHandler(this.HabilitarAlumnoBtn_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(562, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(110, 25);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Deshabilitar Alumno";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // VentanaAdministracionAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 450);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(830, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.HabilitarAlumnoBtn);
             this.Controls.Add(this.ListaAlumnosDGV);
             this.Controls.Add(this.ParametroBusquedaTb);
             this.Controls.Add(this.LegajoRb);
             this.Controls.Add(this.NombreRb);
             this.Controls.Add(this.BuscarAlumnoBtn);
-            this.Controls.Add(this.EliminarAlumnoBtn);
             this.Controls.Add(this.ModificarAlumnoBtn);
             this.Controls.Add(this.AgregarAlumnoBtn);
             this.Name = "VentanaAdministracionAlumnos";
@@ -143,12 +165,13 @@ namespace ProyectoPrestamosCEICU.Ventanas
 
         private System.Windows.Forms.Button AgregarAlumnoBtn;
         private System.Windows.Forms.Button ModificarAlumnoBtn;
-        private System.Windows.Forms.Button EliminarAlumnoBtn;
         private System.Windows.Forms.Button BuscarAlumnoBtn;
         private System.Windows.Forms.RadioButton NombreRb;
         private System.Windows.Forms.RadioButton LegajoRb;
         private System.Windows.Forms.TextBox ParametroBusquedaTb;
         private System.Windows.Forms.DataGridView ListaAlumnosDGV;
         private FachadaCEICU fachada = new FachadaCEICU();
+        private System.Windows.Forms.Button HabilitarAlumnoBtn;
+        private System.Windows.Forms.Button button2;
     }
 }

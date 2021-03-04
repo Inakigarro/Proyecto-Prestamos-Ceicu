@@ -13,10 +13,11 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
     {
         //Atributos de la clase.
 
-        
         private string aLegajo;
         
         private string aMateria;
+
+        private bool aIsHabilitado;
 
         //Constructor de la clase.
         public Profesor() : base() { }
@@ -41,6 +42,13 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
         {
             set { aMateria = value; }
             get { return aMateria; }
+        }
+
+        [Column("HabilitadoProfesor")]
+        public bool Habilitado
+        {
+            get { return aIsHabilitado; }
+            set { aIsHabilitado = value; }
         }
     }
 }

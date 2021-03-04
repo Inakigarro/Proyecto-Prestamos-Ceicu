@@ -67,6 +67,17 @@
     <Compile Include="Clases de Dominio\Profesor.cs" />
     <Compile Include="Clases de Dominio\Secretario.cs" />
     <Compile Include="Clases de Dominio\Zapatillas.cs" />
+    <Compile Include="Clases DTO\AlumnoDTO.cs" />
+    <Compile Include="Clases DTO\ProfesorDTO.cs" />
+    <Compile Include="Migrations\202103041455233_InitialCreate.cs" />
+    <Compile Include="Migrations\202103041455233_InitialCreate.designer.cs">
+      <DependentUpon>202103041455233_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103042036527_HabilitadoProfesores.cs" />
+    <Compile Include="Migrations\202103042036527_HabilitadoProfesores.designer.cs">
+      <DependentUpon>202103042036527_HabilitadoProfesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Ventanas\Ventana Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,18 +86,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ventanas\VentanaAdministracionAlumnos.cs">
+    <Compile Include="Ventanas\VentanasAlumnos\VentanaAdministracionAlumnos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\VentanaAdministracionAlumnos.Designer.cs">
+    <Compile Include="Ventanas\VentanasAlumnos\VentanaAdministracionAlumnos.Designer.cs">
       <DependentUpon>VentanaAdministracionAlumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\VentanaAgregarAlumno.cs">
+    <Compile Include="Ventanas\VentanasAlumnos\VentanaAgregarAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\VentanaAgregarAlumno.Designer.cs">
+    <Compile Include="Ventanas\VentanasAlumnos\VentanaAgregarAlumno.Designer.cs">
       <DependentUpon>VentanaAgregarAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\VentanasAlumnos\VentanaModificarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\VentanasAlumnos\VentanaModificarAlumno.Designer.cs">
+      <DependentUpon>VentanaModificarAlumno.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Migrations\202103041455233_InitialCreate.resx">
+      <DependentUpon>202103041455233_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103042036527_HabilitadoProfesores.resx">
+      <DependentUpon>202103042036527_HabilitadoProfesores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Ventana Principal.resx">
       <DependentUpon>Ventana Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,11 +122,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Ventanas\VentanaAdministracionAlumnos.resx">
+    <EmbeddedResource Include="Ventanas\VentanasAlumnos\VentanaAdministracionAlumnos.resx">
       <DependentUpon>VentanaAdministracionAlumnos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\VentanaAgregarAlumno.resx">
+    <EmbeddedResource Include="Ventanas\VentanasAlumnos\VentanaAgregarAlumno.resx">
       <DependentUpon>VentanaAgregarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\VentanasAlumnos\VentanaModificarAlumno.resx">
+      <DependentUpon>VentanaModificarAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -119,7 +145,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Ventanas\VentanasProfesores\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

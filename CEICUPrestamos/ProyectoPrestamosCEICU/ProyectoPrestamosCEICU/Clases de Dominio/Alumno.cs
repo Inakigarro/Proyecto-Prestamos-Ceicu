@@ -15,6 +15,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
         private string aLegajo;
         private string aCarrera;
         private Secretario aSecretario;
+        private bool aIsHabilitado;
 
         //Constructores de la clase.
         public Alumno() : base() { }
@@ -23,6 +24,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
         {
             aLegajo = pLegajo;
             aCarrera = pCarrera;
+            aIsHabilitado = true;
         }
 
         //Setters y Getters de la clase.
@@ -40,6 +42,13 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
             set { aCarrera = value; }
             get { return aCarrera; }
         }
+
+        [Column("HabilitadoAlumno")]
+        public bool Habilitado
+        {
+            get { return aIsHabilitado; }
+            set { aIsHabilitado = value; }
+        }
         public Secretario Secretario
         {
             set { aSecretario = value; }
@@ -47,6 +56,14 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
         }
 
         //Metodos de la clase.
+        public void Habilitar()
+        {
+            Habilitado = true;
+        }
+        public void Deshabilitar()
+        {
+            Habilitado = false;
+        }
         public bool IsSecretario()
         {
             bool resultado = false;

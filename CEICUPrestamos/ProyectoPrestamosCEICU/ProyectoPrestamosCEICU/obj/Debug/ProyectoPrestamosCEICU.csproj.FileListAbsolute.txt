@@ -15,3 +15,6 @@ E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\Proyect
 E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.VentanaPrincipal.resources
 E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.Ventanas.VentanaAdministracionAlumnos.resources
 E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.Ventanas.VentanaAgregarAlumno.resources
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.Ventanas.VentanaModificarAlumno.resources
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.Migrations.InitialCreate.resources
+E:\GitHub\Proyecto-Prestamos-Ceicu\CEICUPrestamos\ProyectoPrestamosCEICU\ProyectoPrestamosCEICU\obj\Debug\ProyectoPrestamosCEICU.Migrations.HabilitadoProfesores.resources

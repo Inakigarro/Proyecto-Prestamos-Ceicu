@@ -1,5 +1,6 @@
 ﻿
 using ProyectoPrestamosCEICU.Clases_de_Control;
+using ProyectoPrestamosCEICU.Clases_de_Dominio;
 
 namespace ProyectoPrestamosCEICU.Ventanas
 {
@@ -59,7 +60,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // NombreLbl
             // 
             this.NombreLbl.AutoSize = true;
-            this.NombreLbl.Location = new System.Drawing.Point(28, 39);
+            this.NombreLbl.Location = new System.Drawing.Point(17, 39);
             this.NombreLbl.Name = "NombreLbl";
             this.NombreLbl.Size = new System.Drawing.Size(44, 13);
             this.NombreLbl.TabIndex = 0;
@@ -68,7 +69,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // ApellidoLbl
             // 
             this.ApellidoLbl.AutoSize = true;
-            this.ApellidoLbl.Location = new System.Drawing.Point(28, 65);
+            this.ApellidoLbl.Location = new System.Drawing.Point(17, 65);
             this.ApellidoLbl.Name = "ApellidoLbl";
             this.ApellidoLbl.Size = new System.Drawing.Size(44, 13);
             this.ApellidoLbl.TabIndex = 1;
@@ -77,7 +78,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // CiudadLbl
             // 
             this.CiudadLbl.AutoSize = true;
-            this.CiudadLbl.Location = new System.Drawing.Point(32, 91);
+            this.CiudadLbl.Location = new System.Drawing.Point(21, 91);
             this.CiudadLbl.Name = "CiudadLbl";
             this.CiudadLbl.Size = new System.Drawing.Size(40, 13);
             this.CiudadLbl.TabIndex = 2;
@@ -86,7 +87,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // DireccionLbl
             // 
             this.DireccionLbl.AutoSize = true;
-            this.DireccionLbl.Location = new System.Drawing.Point(20, 117);
+            this.DireccionLbl.Location = new System.Drawing.Point(9, 117);
             this.DireccionLbl.Name = "DireccionLbl";
             this.DireccionLbl.Size = new System.Drawing.Size(52, 13);
             this.DireccionLbl.TabIndex = 3;
@@ -95,7 +96,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // TelefonoLbl
             // 
             this.TelefonoLbl.AutoSize = true;
-            this.TelefonoLbl.Location = new System.Drawing.Point(184, 39);
+            this.TelefonoLbl.Location = new System.Drawing.Point(275, 39);
             this.TelefonoLbl.Name = "TelefonoLbl";
             this.TelefonoLbl.Size = new System.Drawing.Size(49, 13);
             this.TelefonoLbl.TabIndex = 4;
@@ -104,7 +105,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // CorreoLbl
             // 
             this.CorreoLbl.AutoSize = true;
-            this.CorreoLbl.Location = new System.Drawing.Point(195, 65);
+            this.CorreoLbl.Location = new System.Drawing.Point(286, 65);
             this.CorreoLbl.Name = "CorreoLbl";
             this.CorreoLbl.Size = new System.Drawing.Size(38, 13);
             this.CorreoLbl.TabIndex = 5;
@@ -113,7 +114,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // LegajoLbl
             // 
             this.LegajoLbl.AutoSize = true;
-            this.LegajoLbl.Location = new System.Drawing.Point(194, 91);
+            this.LegajoLbl.Location = new System.Drawing.Point(285, 91);
             this.LegajoLbl.Name = "LegajoLbl";
             this.LegajoLbl.Size = new System.Drawing.Size(39, 13);
             this.LegajoLbl.TabIndex = 6;
@@ -122,7 +123,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // CarreraLbl
             // 
             this.CarreraLbl.AutoSize = true;
-            this.CarreraLbl.Location = new System.Drawing.Point(192, 117);
+            this.CarreraLbl.Location = new System.Drawing.Point(283, 117);
             this.CarreraLbl.Name = "CarreraLbl";
             this.CarreraLbl.Size = new System.Drawing.Size(41, 13);
             this.CarreraLbl.TabIndex = 7;
@@ -130,56 +131,56 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // 
             // NombreAlumnoTb
             // 
-            this.NombreAlumnoTb.Location = new System.Drawing.Point(78, 36);
+            this.NombreAlumnoTb.Location = new System.Drawing.Point(67, 36);
             this.NombreAlumnoTb.Name = "NombreAlumnoTb";
-            this.NombreAlumnoTb.Size = new System.Drawing.Size(100, 20);
+            this.NombreAlumnoTb.Size = new System.Drawing.Size(183, 20);
             this.NombreAlumnoTb.TabIndex = 8;
             // 
             // ApellidoAlumnoTb
             // 
-            this.ApellidoAlumnoTb.Location = new System.Drawing.Point(78, 62);
+            this.ApellidoAlumnoTb.Location = new System.Drawing.Point(67, 62);
             this.ApellidoAlumnoTb.Name = "ApellidoAlumnoTb";
-            this.ApellidoAlumnoTb.Size = new System.Drawing.Size(100, 20);
+            this.ApellidoAlumnoTb.Size = new System.Drawing.Size(183, 20);
             this.ApellidoAlumnoTb.TabIndex = 9;
             // 
             // CiudadAlumnoTb
             // 
-            this.CiudadAlumnoTb.Location = new System.Drawing.Point(78, 88);
+            this.CiudadAlumnoTb.Location = new System.Drawing.Point(67, 88);
             this.CiudadAlumnoTb.Name = "CiudadAlumnoTb";
-            this.CiudadAlumnoTb.Size = new System.Drawing.Size(100, 20);
+            this.CiudadAlumnoTb.Size = new System.Drawing.Size(183, 20);
             this.CiudadAlumnoTb.TabIndex = 10;
             // 
             // DireccionAlumnoTb
             // 
-            this.DireccionAlumnoTb.Location = new System.Drawing.Point(78, 114);
+            this.DireccionAlumnoTb.Location = new System.Drawing.Point(67, 114);
             this.DireccionAlumnoTb.Name = "DireccionAlumnoTb";
-            this.DireccionAlumnoTb.Size = new System.Drawing.Size(100, 20);
+            this.DireccionAlumnoTb.Size = new System.Drawing.Size(183, 20);
             this.DireccionAlumnoTb.TabIndex = 11;
             // 
             // TelefonoAlumnoTb
             // 
-            this.TelefonoAlumnoTb.Location = new System.Drawing.Point(239, 36);
+            this.TelefonoAlumnoTb.Location = new System.Drawing.Point(330, 36);
             this.TelefonoAlumnoTb.Name = "TelefonoAlumnoTb";
-            this.TelefonoAlumnoTb.Size = new System.Drawing.Size(100, 20);
+            this.TelefonoAlumnoTb.Size = new System.Drawing.Size(183, 20);
             this.TelefonoAlumnoTb.TabIndex = 12;
             // 
             // CorreoAlumnoTb
             // 
-            this.CorreoAlumnoTb.Location = new System.Drawing.Point(239, 62);
+            this.CorreoAlumnoTb.Location = new System.Drawing.Point(330, 62);
             this.CorreoAlumnoTb.Name = "CorreoAlumnoTb";
-            this.CorreoAlumnoTb.Size = new System.Drawing.Size(100, 20);
+            this.CorreoAlumnoTb.Size = new System.Drawing.Size(183, 20);
             this.CorreoAlumnoTb.TabIndex = 13;
             // 
             // LegajoAlumnoTb
             // 
-            this.LegajoAlumnoTb.Location = new System.Drawing.Point(239, 88);
+            this.LegajoAlumnoTb.Location = new System.Drawing.Point(330, 88);
             this.LegajoAlumnoTb.Name = "LegajoAlumnoTb";
-            this.LegajoAlumnoTb.Size = new System.Drawing.Size(100, 20);
+            this.LegajoAlumnoTb.Size = new System.Drawing.Size(183, 20);
             this.LegajoAlumnoTb.TabIndex = 14;
             // 
             // AceptarBtn
             // 
-            this.AceptarBtn.Location = new System.Drawing.Point(89, 154);
+            this.AceptarBtn.Location = new System.Drawing.Point(175, 154);
             this.AceptarBtn.Name = "AceptarBtn";
             this.AceptarBtn.Size = new System.Drawing.Size(75, 23);
             this.AceptarBtn.TabIndex = 16;
@@ -189,7 +190,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.Location = new System.Drawing.Point(252, 154);
+            this.CancelarBtn.Location = new System.Drawing.Point(330, 154);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(75, 23);
             this.CancelarBtn.TabIndex = 17;
@@ -200,16 +201,16 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // CarreraAlumboCb
             // 
             this.CarreraAlumboCb.FormattingEnabled = true;
-            this.CarreraAlumboCb.Location = new System.Drawing.Point(239, 114);
+            this.CarreraAlumboCb.Location = new System.Drawing.Point(330, 114);
             this.CarreraAlumboCb.Name = "CarreraAlumboCb";
-            this.CarreraAlumboCb.Size = new System.Drawing.Size(100, 21);
+            this.CarreraAlumboCb.Size = new System.Drawing.Size(183, 21);
             this.CarreraAlumboCb.TabIndex = 18;
             // 
             // VentanaAgregarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 210);
+            this.ClientSize = new System.Drawing.Size(566, 210);
             this.Controls.Add(this.CarreraAlumboCb);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.AceptarBtn);
