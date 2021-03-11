@@ -13,13 +13,13 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
     {
         //Atributos de la clase.
         private string aLegajo;
-        private string aCarrera;
+        private Carrera aCarrera;
         private Secretario aSecretario;
         private bool aIsHabilitado;
 
         //Constructores de la clase.
         public Alumno() : base() { }
-        public Alumno(string pNombre, string pApellido, string pCiudadActual, string pDireccion, string pTelefono, string pCorreo, string pLegajo, string pCarrera)
+        public Alumno(string pNombre, string pApellido, string pCiudadActual, string pDireccion, string pTelefono, string pCorreo, string pLegajo, Carrera pCarrera)
             :base(pNombre, pApellido, pCiudadActual, pDireccion, pTelefono, pCorreo)
         {
             aLegajo = pLegajo;
@@ -36,8 +36,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
             get { return aLegajo; }
         }
 
-        [Column("Carrera")]
-        public string Carrera
+        public Carrera Carrera
         {
             set { aCarrera = value; }
             get { return aCarrera; }
@@ -75,14 +74,14 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
         }
         public string getSecretaria()
         {
-            string resultado = "";
+            string resultado;
             if (IsSecretario())
             {
-                resultado = Secretario.Secretaria;
+                resultado = Secretario.GetSecretaria();
             }
             else
             {
-                resultado = "El alumno no es secretario de la comision directiva del CEICU";
+                throw new NullReferenceException();
             }
             return resultado;
         }

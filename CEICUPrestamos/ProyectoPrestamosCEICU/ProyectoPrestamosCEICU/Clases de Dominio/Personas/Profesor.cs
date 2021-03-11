@@ -15,17 +15,18 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
 
         private string aLegajo;
         
-        private string aMateria;
+        private Materia aMateria;
 
         private bool aIsHabilitado;
 
         //Constructor de la clase.
         public Profesor() : base() { }
-        public Profesor(string pNombre, string pApellido, string pCiudadActual, string pDireccion, string pTelefono, string pCorreo, string pLegajo, string pMateria)
+        public Profesor(string pNombre, string pApellido, string pCiudadActual, string pDireccion, string pTelefono, string pCorreo, string pLegajo, Materia pMateria)
             : base(pNombre, pApellido, pCiudadActual, pDireccion, pTelefono, pCorreo)
         {
             aLegajo = pLegajo;
             aMateria = pMateria;
+            aIsHabilitado = true;
         }
 
         //Setters y Getters de la clase.
@@ -38,7 +39,7 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
         }
 
         [Column("Materia")]
-        public string Materia
+        public Materia Materia
         {
             set { aMateria = value; }
             get { return aMateria; }
@@ -49,6 +50,20 @@ namespace ProyectoPrestamosCEICU.Clases_de_Dominio
         {
             get { return aIsHabilitado; }
             set { aIsHabilitado = value; }
+        }
+
+        //Metodos de la clase.
+        public string GetNombreMateria()
+        {
+            if(Materia != null)
+            {
+                return Materia.Nombre;
+            }
+            else
+            {
+                throw new NullReferenceException("Materia");
+            }
+            
         }
     }
 }

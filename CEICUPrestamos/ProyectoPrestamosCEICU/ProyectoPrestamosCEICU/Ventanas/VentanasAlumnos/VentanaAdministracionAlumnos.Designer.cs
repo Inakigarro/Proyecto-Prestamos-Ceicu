@@ -33,21 +33,21 @@ namespace ProyectoPrestamosCEICU.Ventanas
         {
             this.AgregarAlumnoBtn = new System.Windows.Forms.Button();
             this.ModificarAlumnoBtn = new System.Windows.Forms.Button();
-            this.BuscarAlumnoBtn = new System.Windows.Forms.Button();
             this.NombreRb = new System.Windows.Forms.RadioButton();
             this.LegajoRb = new System.Windows.Forms.RadioButton();
             this.ParametroBusquedaTb = new System.Windows.Forms.TextBox();
             this.ListaAlumnosDGV = new System.Windows.Forms.DataGridView();
             this.HabilitarAlumnoBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.AltaSecretario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ListaAlumnosDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // AgregarAlumnoBtn
             // 
-            this.AgregarAlumnoBtn.Location = new System.Drawing.Point(244, 12);
+            this.AgregarAlumnoBtn.Location = new System.Drawing.Point(199, 10);
             this.AgregarAlumnoBtn.Name = "AgregarAlumnoBtn";
-            this.AgregarAlumnoBtn.Size = new System.Drawing.Size(100, 25);
+            this.AgregarAlumnoBtn.Size = new System.Drawing.Size(110, 25);
             this.AgregarAlumnoBtn.TabIndex = 0;
             this.AgregarAlumnoBtn.Text = "Agregar Alumno";
             this.AgregarAlumnoBtn.UseVisualStyleBackColor = true;
@@ -55,28 +55,18 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // 
             // ModificarAlumnoBtn
             // 
-            this.ModificarAlumnoBtn.Location = new System.Drawing.Point(350, 12);
+            this.ModificarAlumnoBtn.Location = new System.Drawing.Point(351, 10);
             this.ModificarAlumnoBtn.Name = "ModificarAlumnoBtn";
-            this.ModificarAlumnoBtn.Size = new System.Drawing.Size(100, 25);
+            this.ModificarAlumnoBtn.Size = new System.Drawing.Size(110, 25);
             this.ModificarAlumnoBtn.TabIndex = 1;
             this.ModificarAlumnoBtn.Text = "Modificar Alumno";
             this.ModificarAlumnoBtn.UseVisualStyleBackColor = true;
             this.ModificarAlumnoBtn.Click += new System.EventHandler(this.ModificarAlumnoBtn_Click);
             // 
-            // BuscarAlumnoBtn
-            // 
-            this.BuscarAlumnoBtn.Location = new System.Drawing.Point(138, 12);
-            this.BuscarAlumnoBtn.Name = "BuscarAlumnoBtn";
-            this.BuscarAlumnoBtn.Size = new System.Drawing.Size(100, 25);
-            this.BuscarAlumnoBtn.TabIndex = 3;
-            this.BuscarAlumnoBtn.Text = "Buscar Alumno";
-            this.BuscarAlumnoBtn.UseVisualStyleBackColor = true;
-            this.BuscarAlumnoBtn.Click += new System.EventHandler(this.BuscarAlumnoBtn_Click);
-            // 
             // NombreRb
             // 
             this.NombreRb.AutoSize = true;
-            this.NombreRb.Location = new System.Drawing.Point(70, 16);
+            this.NombreRb.Location = new System.Drawing.Point(105, 13);
             this.NombreRb.Name = "NombreRb";
             this.NombreRb.Size = new System.Drawing.Size(62, 17);
             this.NombreRb.TabIndex = 4;
@@ -87,7 +77,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // LegajoRb
             // 
             this.LegajoRb.AutoSize = true;
-            this.LegajoRb.Location = new System.Drawing.Point(7, 16);
+            this.LegajoRb.Location = new System.Drawing.Point(13, 13);
             this.LegajoRb.Name = "LegajoRb";
             this.LegajoRb.Size = new System.Drawing.Size(57, 17);
             this.LegajoRb.TabIndex = 5;
@@ -97,9 +87,9 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // 
             // ParametroBusquedaTb
             // 
-            this.ParametroBusquedaTb.Location = new System.Drawing.Point(7, 39);
+            this.ParametroBusquedaTb.Location = new System.Drawing.Point(14, 36);
             this.ParametroBusquedaTb.Name = "ParametroBusquedaTb";
-            this.ParametroBusquedaTb.Size = new System.Drawing.Size(811, 20);
+            this.ParametroBusquedaTb.Size = new System.Drawing.Size(903, 20);
             this.ParametroBusquedaTb.TabIndex = 6;
             this.ParametroBusquedaTb.TextChanged += new System.EventHandler(this.ParametroBusquedaTb_TextChanged);
             // 
@@ -107,7 +97,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // 
             this.ListaAlumnosDGV.AllowUserToOrderColumns = true;
             this.ListaAlumnosDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListaAlumnosDGV.Location = new System.Drawing.Point(7, 65);
+            this.ListaAlumnosDGV.Location = new System.Drawing.Point(14, 62);
             this.ListaAlumnosDGV.MultiSelect = false;
             this.ListaAlumnosDGV.Name = "ListaAlumnosDGV";
             this.ListaAlumnosDGV.ReadOnly = true;
@@ -115,14 +105,14 @@ namespace ProyectoPrestamosCEICU.Ventanas
             this.ListaAlumnosDGV.RowTemplate.ReadOnly = true;
             this.ListaAlumnosDGV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ListaAlumnosDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ListaAlumnosDGV.Size = new System.Drawing.Size(808, 372);
+            this.ListaAlumnosDGV.Size = new System.Drawing.Size(903, 487);
             this.ListaAlumnosDGV.TabIndex = 7;
             // 
             // HabilitarAlumnoBtn
             // 
-            this.HabilitarAlumnoBtn.Location = new System.Drawing.Point(456, 12);
+            this.HabilitarAlumnoBtn.Location = new System.Drawing.Point(503, 10);
             this.HabilitarAlumnoBtn.Name = "HabilitarAlumnoBtn";
-            this.HabilitarAlumnoBtn.Size = new System.Drawing.Size(100, 25);
+            this.HabilitarAlumnoBtn.Size = new System.Drawing.Size(110, 25);
             this.HabilitarAlumnoBtn.TabIndex = 8;
             this.HabilitarAlumnoBtn.Text = "Habilitar Alumno";
             this.HabilitarAlumnoBtn.UseVisualStyleBackColor = true;
@@ -130,7 +120,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(562, 12);
+            this.button2.Location = new System.Drawing.Point(655, 10);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 25);
             this.button2.TabIndex = 9;
@@ -138,19 +128,29 @@ namespace ProyectoPrestamosCEICU.Ventanas
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // AltaSecretario
+            // 
+            this.AltaSecretario.Location = new System.Drawing.Point(807, 10);
+            this.AltaSecretario.Name = "AltaSecretario";
+            this.AltaSecretario.Size = new System.Drawing.Size(110, 25);
+            this.AltaSecretario.TabIndex = 10;
+            this.AltaSecretario.Text = "Asignar Secretaria";
+            this.AltaSecretario.UseVisualStyleBackColor = true;
+            this.AltaSecretario.Click += new System.EventHandler(this.AltaSecretario_Click);
+            // 
             // VentanaAdministracionAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(830, 450);
+            this.ClientSize = new System.Drawing.Size(931, 561);
+            this.Controls.Add(this.AltaSecretario);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.HabilitarAlumnoBtn);
             this.Controls.Add(this.ListaAlumnosDGV);
             this.Controls.Add(this.ParametroBusquedaTb);
             this.Controls.Add(this.LegajoRb);
             this.Controls.Add(this.NombreRb);
-            this.Controls.Add(this.BuscarAlumnoBtn);
             this.Controls.Add(this.ModificarAlumnoBtn);
             this.Controls.Add(this.AgregarAlumnoBtn);
             this.Name = "VentanaAdministracionAlumnos";
@@ -165,7 +165,6 @@ namespace ProyectoPrestamosCEICU.Ventanas
 
         private System.Windows.Forms.Button AgregarAlumnoBtn;
         private System.Windows.Forms.Button ModificarAlumnoBtn;
-        private System.Windows.Forms.Button BuscarAlumnoBtn;
         private System.Windows.Forms.RadioButton NombreRb;
         private System.Windows.Forms.RadioButton LegajoRb;
         private System.Windows.Forms.TextBox ParametroBusquedaTb;
@@ -173,5 +172,6 @@ namespace ProyectoPrestamosCEICU.Ventanas
         private FachadaCEICU fachada = new FachadaCEICU();
         private System.Windows.Forms.Button HabilitarAlumnoBtn;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AltaSecretario;
     }
 }

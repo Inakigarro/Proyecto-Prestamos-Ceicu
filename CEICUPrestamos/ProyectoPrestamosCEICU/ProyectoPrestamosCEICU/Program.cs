@@ -17,7 +17,7 @@ namespace ProyectoPrestamosCEICU
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VentanaAdministracionAlumnos());
+            Application.Run(new VentanaPrincipal());
         }
     }
 }

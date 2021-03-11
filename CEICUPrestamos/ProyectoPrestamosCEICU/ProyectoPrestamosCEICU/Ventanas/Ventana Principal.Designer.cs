@@ -32,14 +32,16 @@ namespace ProyectoPrestamosCEICU
             this.components = new System.ComponentModel.Container();
             this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
             this.AdministracionAlumnosMI = new System.Windows.Forms.MenuItem();
-            this.menuItem2 = new System.Windows.Forms.MenuItem();
+            this.AdministracionProfesoresMI = new System.Windows.Forms.MenuItem();
+            this.AdministracionMaterialesMI = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
             // 
             this.mainMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.AdministracionAlumnosMI,
-            this.menuItem2});
+            this.AdministracionProfesoresMI,
+            this.AdministracionMaterialesMI});
             // 
             // AdministracionAlumnosMI
             // 
@@ -47,16 +49,22 @@ namespace ProyectoPrestamosCEICU
             this.AdministracionAlumnosMI.Text = "Administracion Alumnos";
             this.AdministracionAlumnosMI.Click += new System.EventHandler(this.AdministracionAlumnosMI_Click);
             // 
-            // menuItem2
+            // AdministracionProfesoresMI
             // 
-            this.menuItem2.Index = 1;
-            this.menuItem2.Text = "Administracion Profesores";
+            this.AdministracionProfesoresMI.Index = 1;
+            this.AdministracionProfesoresMI.Text = "Administracion Profesores";
+            this.AdministracionProfesoresMI.Click += new System.EventHandler(this.AdministracionProfesoresMI_Click);
+            // 
+            // AdministracionMaterialesMI
+            // 
+            this.AdministracionMaterialesMI.Index = 2;
+            this.AdministracionMaterialesMI.Text = "Administracion Materiales";
             // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 542);
+            this.ClientSize = new System.Drawing.Size(784, 540);
             this.Menu = this.mainMenu1;
             this.Name = "VentanaPrincipal";
             this.Text = "Ventana Principal";
@@ -68,7 +76,8 @@ namespace ProyectoPrestamosCEICU
 
         private System.Windows.Forms.MainMenu mainMenu1;
         private System.Windows.Forms.MenuItem AdministracionAlumnosMI;
-        private System.Windows.Forms.MenuItem menuItem2;
+        private System.Windows.Forms.MenuItem AdministracionProfesoresMI;
+        private System.Windows.Forms.MenuItem AdministracionMaterialesMI;
     }
 }
 

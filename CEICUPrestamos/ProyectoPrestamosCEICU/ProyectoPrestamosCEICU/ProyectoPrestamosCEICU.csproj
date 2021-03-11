@@ -58,26 +58,22 @@
   <ItemGroup>
     <Compile Include="Clases de Control\BaseDeDatosContext.cs" />
     <Compile Include="Clases de Control\FachadaCEICU.cs" />
-    <Compile Include="Clases de Dominio\Alumno.cs" />
-    <Compile Include="Clases de Dominio\CargadorPortatil.cs" />
-    <Compile Include="Clases de Dominio\Carreras.cs" />
-    <Compile Include="Clases de Dominio\Casco.cs" />
-    <Compile Include="Clases de Dominio\Material.cs" />
-    <Compile Include="Clases de Dominio\Persona.cs" />
-    <Compile Include="Clases de Dominio\Profesor.cs" />
-    <Compile Include="Clases de Dominio\Secretario.cs" />
-    <Compile Include="Clases de Dominio\Zapatillas.cs" />
+    <Compile Include="Clases de Control\Usuario.cs" />
+    <Compile Include="Clases de Dominio\Personas\Alumno.cs" />
+    <Compile Include="Clases de Dominio\Materiales\CargadorPortatil.cs" />
+    <Compile Include="Clases de Dominio\Personas\Carrera.cs" />
+    <Compile Include="Clases de Dominio\Materiales\Casco.cs" />
+    <Compile Include="Clases de Dominio\Materiales\Material.cs" />
+    <Compile Include="Clases de Dominio\Personas\Materia.cs" />
+    <Compile Include="Clases de Dominio\Personas\Persona.cs" />
+    <Compile Include="Clases de Dominio\Personas\Profesor.cs" />
+    <Compile Include="Clases de Dominio\Personas\Secretaria.cs" />
+    <Compile Include="Clases de Dominio\Personas\Secretario.cs" />
+    <Compile Include="Clases de Dominio\Materiales\Zapatillas.cs" />
     <Compile Include="Clases DTO\AlumnoDTO.cs" />
+    <Compile Include="Clases DTO\CarreraDTO.cs" />
     <Compile Include="Clases DTO\ProfesorDTO.cs" />
-    <Compile Include="Migrations\202103041455233_InitialCreate.cs" />
-    <Compile Include="Migrations\202103041455233_InitialCreate.designer.cs">
-      <DependentUpon>202103041455233_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103042036527_HabilitadoProfesores.cs" />
-    <Compile Include="Migrations\202103042036527_HabilitadoProfesores.designer.cs">
-      <DependentUpon>202103042036527_HabilitadoProfesores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Clases DTO\SecretariaDTO.cs" />
     <Compile Include="Ventanas\Ventana Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,18 +94,48 @@
     <Compile Include="Ventanas\VentanasAlumnos\VentanaAgregarAlumno.Designer.cs">
       <DependentUpon>VentanaAgregarAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\VentanasAlumnos\VentanaAgregarCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\VentanasAlumnos\VentanaAgregarCarrera.Designer.cs">
+      <DependentUpon>VentanaAgregarCarrera.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\VentanasAlumnos\VentanaModificarAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\VentanasAlumnos\VentanaModificarAlumno.Designer.cs">
       <DependentUpon>VentanaModificarAlumno.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\202103041455233_InitialCreate.resx">
-      <DependentUpon>202103041455233_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103042036527_HabilitadoProfesores.resx">
-      <DependentUpon>202103042036527_HabilitadoProfesores.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Ventanas\VentanasProfesores\VentanaAdministracionProfesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\VentanasProfesores\VentanaAdministracionProfesores.Designer.cs">
+      <DependentUpon>VentanaAdministracionProfesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\VentanasProfesores\VentanaAgregarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\VentanasProfesores\VentanaAgregarProfesor.Designer.cs">
+      <DependentUpon>VentanaAgregarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\VentanasSecretarios\VentanaCrearSecretaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\VentanasSecretarios\VentanaCrearSecretaria.Designer.cs">
+      <DependentUpon>VentanaCrearSecretaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\VentanasSecretarios\VentanaCrearSecretario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\VentanasSecretarios\VentanaCrearSecretario.Designer.cs">
+      <DependentUpon>VentanaCrearSecretario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\VentanasSecretarios\VentanaModificarSecretaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\VentanasSecretarios\VentanaModificarSecretaria.Designer.cs">
+      <DependentUpon>VentanaModificarSecretaria.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Ventanas\Ventana Principal.resx">
       <DependentUpon>Ventana Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,8 +154,26 @@
     <EmbeddedResource Include="Ventanas\VentanasAlumnos\VentanaAgregarAlumno.resx">
       <DependentUpon>VentanaAgregarAlumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\VentanasAlumnos\VentanaAgregarCarrera.resx">
+      <DependentUpon>VentanaAgregarCarrera.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\VentanasAlumnos\VentanaModificarAlumno.resx">
       <DependentUpon>VentanaModificarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\VentanasProfesores\VentanaAdministracionProfesores.resx">
+      <DependentUpon>VentanaAdministracionProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\VentanasProfesores\VentanaAgregarProfesor.resx">
+      <DependentUpon>VentanaAgregarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\VentanasSecretarios\VentanaCrearSecretaria.resx">
+      <DependentUpon>VentanaCrearSecretaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\VentanasSecretarios\VentanaCrearSecretario.resx">
+      <DependentUpon>VentanaCrearSecretario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\VentanasSecretarios\VentanaModificarSecretaria.resx">
+      <DependentUpon>VentanaModificarSecretaria.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -145,9 +189,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Ventanas\VentanasProfesores\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

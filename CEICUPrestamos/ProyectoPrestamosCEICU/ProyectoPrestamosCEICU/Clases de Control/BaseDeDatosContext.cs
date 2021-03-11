@@ -16,7 +16,11 @@ namespace ProyectoPrestamosCEICU.Clases_de_Control
         //DbSets.
         public DbSet<Alumno> Alumnos { get; set; }
         public DbSet<Profesor> Profesores { get; set; }
+        public DbSet<Secretaria> Secretarias { get; set; }
         public DbSet<Secretario> Secretarios { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Material> Materiales { get; set; }
+        public DbSet<Carrera> Carreras { get; set; }
+        public DbSet<Materia> Materias { get; set; }
     }
 }

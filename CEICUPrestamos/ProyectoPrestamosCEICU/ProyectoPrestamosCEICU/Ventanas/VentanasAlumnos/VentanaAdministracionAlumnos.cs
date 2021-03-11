@@ -1,4 +1,5 @@
 ﻿using ProyectoPrestamosCEICU.Clases_de_Dominio;
+using ProyectoPrestamosCEICU.Ventanas.VentanasSecretarios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,17 +23,29 @@ namespace ProyectoPrestamosCEICU.Ventanas
 
         private void AgregarAlumnoBtn_Click(object sender, EventArgs e)
         {
-            var ventanaAgregarAlumno = new VentanaAgregarAlumno();
-            ventanaAgregarAlumno.VAAlumnos = this;
-            ventanaAgregarAlumno.Activate();
-            ventanaAgregarAlumno.Visible = true;
-            
+            using(VentanaAgregarAlumno ventana = new VentanaAgregarAlumno())
+            {
+                if(ventana.ShowDialog() == DialogResult.OK)
+                {
+                    ActualizarListaAlumnos();
+                }
+            }
+            ActualizarListaAlumnos();
         }
 
-        public void ActualizarListaAlumnos()
+        private void ActualizarListaAlumnos()
         {
-            ListaAlumnosDGV.DataSource = null;
-            ListaAlumnosDGV.DataSource = (new BindingSource().DataSource = fachada.ListarAlumnos());
+            try
+            {
+                ListaAlumnosDGV.DataSource = null;
+                ListaAlumnosDGV.DataSource = (new BindingSource().DataSource = fachada.ListarAlumnos());
+            }
+            catch (NullReferenceException)
+            {
+
+                MessageBox.Show("Error al cargar la lista de alumnos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void BuscarAlumnoBtn_Click(object sender, EventArgs e)
@@ -82,14 +95,16 @@ namespace ProyectoPrestamosCEICU.Ventanas
         {
             //Capturo el legajo del alumno seleccionado.
             var filaSeleccionada = ListaAlumnosDGV.CurrentRow;
-            var legajoAlumno = (string) filaSeleccionada.Cells[0].Value;
+            var alumno = fachada.BuscarAlumnoLegajo((string) filaSeleccionada.Cells[0].Value).First();
 
-            //Llamo a la ventana para modificar los datos.
-            var ventanaAlumnos = new VentanaModificarAlumno();
-            ventanaAlumnos.VentanaPadre = this;
-            ventanaAlumnos.CargarAlumno(legajoAlumno);
-            ventanaAlumnos.Activate();
-            ventanaAlumnos.Visible = true;
+            using (VentanaModificarAlumno ventana = new VentanaModificarAlumno(alumno))
+            {
+                if(ventana.ShowDialog() == DialogResult.OK)
+                {
+                    ActualizarListaAlumnos();
+                }
+            }
+            ActualizarListaAlumnos();
         }
 
         private void HabilitarAlumnoBtn_Click(object sender, EventArgs e)
@@ -123,6 +138,20 @@ namespace ProyectoPrestamosCEICU.Ventanas
             catch (WarningException)
             {
                 MessageBox.Show("Este alumno ya estaba deshabilitado.", "Error: Alumno No Deshabilitado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void AltaSecretario_Click(object sender, EventArgs e)
+        {
+            //Capturo el alumno seleccionado.
+            var alumnoDTO = fachada.BuscarAlumnoLegajo(ListaAlumnosDGV.CurrentRow.Cells[0].Value.ToString()).First();
+            using (VentanaCrearSecretario ventana = new VentanaCrearSecretario(alumnoDTO))
+            {
+                if(ventana.ShowDialog() == DialogResult.OK)
+                {
+                    ActualizarListaAlumnos();
+                }
+                ActualizarListaAlumnos();
             }
         }
     }

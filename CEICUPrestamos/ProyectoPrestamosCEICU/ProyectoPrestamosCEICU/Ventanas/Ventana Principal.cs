@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoPrestamosCEICU.Ventanas;
+using ProyectoPrestamosCEICU.Ventanas.VentanasProfesores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,16 @@ namespace ProyectoPrestamosCEICU
 
         private void AdministracionAlumnosMI_Click(object sender, EventArgs e)
         {
+            var ventana = new VentanaAdministracionAlumnos();
+            ventana.Activate();
+            ventana.Visible = true;
+        }
 
+        private void AdministracionProfesoresMI_Click(object sender, EventArgs e)
+        {
+            var ventana = new VentanaAdministracionProfesores();
+            ventana.Activate();
+            ventana.Visible = true;
         }
     }
 }

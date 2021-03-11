@@ -22,11 +22,6 @@ namespace ProyectoPrestamosCEICU.Ventanas
             }
             base.Dispose(disposing);
         }
-        public VentanaAdministracionAlumnos VentanaPadre
-        {
-            get { return ventanaPadre; }
-            set { ventanaPadre = value; }
-        }
 
         #region Windows Form Designer generated code
 
@@ -54,6 +49,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             this.CiudadLbl = new System.Windows.Forms.Label();
             this.ApellidoLbl = new System.Windows.Forms.Label();
             this.NombreLbl = new System.Windows.Forms.Label();
+            this.AgregarCarreraBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CarreraAlumboCb
@@ -66,6 +62,7 @@ namespace ProyectoPrestamosCEICU.Ventanas
             // 
             // CancelarBtn
             // 
+            this.CancelarBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CancelarBtn.Location = new System.Drawing.Point(324, 163);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(75, 23);
@@ -204,11 +201,24 @@ namespace ProyectoPrestamosCEICU.Ventanas
             this.NombreLbl.TabIndex = 19;
             this.NombreLbl.Text = "Nombre";
             // 
+            // AgregarCarreraBtn
+            // 
+            this.AgregarCarreraBtn.Location = new System.Drawing.Point(513, 110);
+            this.AgregarCarreraBtn.Name = "AgregarCarreraBtn";
+            this.AgregarCarreraBtn.Size = new System.Drawing.Size(24, 20);
+            this.AgregarCarreraBtn.TabIndex = 37;
+            this.AgregarCarreraBtn.Text = "+";
+            this.AgregarCarreraBtn.UseVisualStyleBackColor = true;
+            this.AgregarCarreraBtn.Click += new System.EventHandler(this.AgregarCarreraBtn_Click);
+            // 
             // VentanaModificarAlumno
             // 
+            this.AcceptButton = this.AceptarBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.CancelarBtn;
             this.ClientSize = new System.Drawing.Size(566, 210);
+            this.Controls.Add(this.AgregarCarreraBtn);
             this.Controls.Add(this.CarreraAlumboCb);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.AceptarBtn);
@@ -255,7 +265,6 @@ namespace ProyectoPrestamosCEICU.Ventanas
         private System.Windows.Forms.Label ApellidoLbl;
         private System.Windows.Forms.Label NombreLbl;
         private FachadaCEICU fachada = new FachadaCEICU();
-        private VentanaAdministracionAlumnos ventanaPadre;
-        private string legajoAlumno;
+        private System.Windows.Forms.Button AgregarCarreraBtn;
     }
 }

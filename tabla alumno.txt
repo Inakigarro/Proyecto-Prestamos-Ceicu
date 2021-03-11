@@ -1,0 +1,5 @@
+﻿Legajo	Carrera	Nombre	Apellido	Ciudad	Direccion	Telefono	Correo	Secretario_IdSecretario
+14105705	ISI	Iñaki	Garro	Concepcion del Uruguay	Belgrano 832	3442480148	ignakigarro@gmail.com	NULL
+14111824	ELECTRO	Franco Ezequiel	D'Addona	Concepcion del Uruguay	Dr Clark 442	3446536986	francoed2006@gmail.com	NULL
+14126815	ISI	Santiago Francisco	Surracco	Concepcion del Uruguay	Mariano Lopez 269	3445442418	santiagosurraco@gmail.com	NULL
+14127355	ISI	Joel Francisco	Gonzalez	Villaguay	Ruta18 Km 137	3455484785	stadelmangonzalezjoel@gmail.com	NULL

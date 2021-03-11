@@ -1,4 +1,6 @@
 ﻿using ProyectoPrestamosCEICU.Clases_de_Dominio;
+using ProyectoPrestamosCEICU.Clases_DTO;
+using ProyectoPrestamosCEICU.Ventanas.VentanasAlumnos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,54 +15,91 @@ namespace ProyectoPrestamosCEICU.Ventanas
 {
     public partial class VentanaModificarAlumno : Form
     {
-        public VentanaModificarAlumno()
+        private AlumnoDTO aAlumno;
+        public VentanaModificarAlumno(AlumnoDTO pAlumno)
         {
             InitializeComponent();
-            CarreraAlumboCb.DataSource = Enum.GetValues(typeof(Carreras));
+            aAlumno = pAlumno;
+            ListarCarreras();
+            CargarAlumno();
         }
 
-        public void CargarAlumno(string pLegajo)
+        private void ListarCarreras()
         {
-            //Busco el alumno en la base de datos.
-            this.legajoAlumno = pLegajo;
-            var alumno = fachada.BuscarAlumnoLegajo(pLegajo).First();
-
-            //Cargo los datos del alumno en la ventana.
-            NombreAlumnoTb.Text = alumno.Nombre;
-            ApellidoAlumnoTb.Text = alumno.Apellido;
-            CiudadAlumnoTb.Text = alumno.Ciudad;
-            DireccionAlumnoTb.Text = alumno.Direccion;
-            TelefonoAlumnoTb.Text = alumno.Telefono;
-            CorreoAlumnoTb.Text = alumno.Correo;
-            LegajoAlumnoTb.Text = alumno.Legajo;
-            CarreraAlumboCb.Text = alumno.Carrera;
+            var lista = new List<string>();
+            var listaCarreras = fachada.ListarCarreras();
+            foreach (var item in listaCarreras)
+            {
+                lista.Add(item.Codigo);
+            }
+            CarreraAlumboCb.DataSource = lista;
+            CarreraAlumboCb.Refresh();
+        }
+        private void CargarAlumno()
+        {
+            //Cargo los campos de texto.
+            NombreAlumnoTb.Text = aAlumno.Nombre;
+            ApellidoAlumnoTb.Text = aAlumno.Apellido;
+            CiudadAlumnoTb.Text = aAlumno.Ciudad;
+            DireccionAlumnoTb.Text = aAlumno.Direccion;
+            TelefonoAlumnoTb.Text = aAlumno.Telefono;
+            CorreoAlumnoTb.Text = aAlumno.Correo;
+            LegajoAlumnoTb.Text = aAlumno.Legajo;
+            CarreraAlumboCb.SelectedItem = aAlumno.Carrera;
         }
 
         private void AceptarBtn_Click(object sender, EventArgs e)
         {
-            string nombre = NombreAlumnoTb.Text;
-            string apellido = ApellidoAlumnoTb.Text;
-            string ciudad = CiudadAlumnoTb.Text;
-            string direccion = DireccionAlumnoTb.Text;
-            string telefono = TelefonoAlumnoTb.Text;
-            string correo = CorreoAlumnoTb.Text;
-            string legajo = LegajoAlumnoTb.Text;
-            string carrera = CarreraAlumboCb.Text; 
-
-            //Compruebo si se modifico el legajo del alumno cargado.
-            if (this.legajoAlumno != legajo)
+            try
             {
-                fachada.ModificarAlumno(nombre, apellido, ciudad, direccion, telefono, correo, this.legajoAlumno, legajo, carrera);
+                //Capturo los datos de los campos.
+                string vNombre = NombreAlumnoTb.Text;
+                string vApellido = ApellidoAlumnoTb.Text;
+                string vCiudad = CiudadAlumnoTb.Text;
+                string vDireccion = DireccionAlumnoTb.Text;
+                string vTelefono = TelefonoAlumnoTb.Text;
+                string vCorreo = CorreoAlumnoTb.Text;
+                string vLegajo = LegajoAlumnoTb.Text;
+                string vCarrera = CarreraAlumboCb.SelectedItem.ToString();
+                
+                //Compruebo si se modifico el legajo.
+                if (aAlumno.Legajo != vLegajo)
+                {
+                    var resultado = MessageBox.Show("Esta modificando el Legajo. ¿Esta seguro que desea hacerlo?",
+                                    "Cuidado! Esta modificando el Legajo",
+                                    MessageBoxButtons.OKCancel,
+                                    MessageBoxIcon.Warning);
+                    if(resultado == DialogResult.OK)
+                    {
+                        fachada.ModificarAlumnoNuevo(aAlumno, vNombre, vApellido, vCiudad, vDireccion, vTelefono, vCorreo, vLegajo, vCarrera);
+                    }
+                    
+                }
+                else
+                {
+                    fachada.ModificarAlumno(vNombre, vApellido, vCiudad, vDireccion, vTelefono, vCorreo, vLegajo, vCarrera);
+                }
             }
-            else
+            catch (Exception)
             {
-                fachada.ModificarAlumno(nombre, apellido, ciudad, direccion, telefono, correo, legajo, carrera);
-            }
 
-            ventanaPadre.ActualizarListaAlumnos();
+                throw;
+            }
             this.Close();
             this.Dispose();
 
+        }
+
+        private void AgregarCarreraBtn_Click(object sender, EventArgs e)
+        {
+            using (VentanaAgregarCarrera ventana = new VentanaAgregarCarrera())
+            {
+                if (ventana.ShowDialog() == DialogResult.OK)
+                {
+                    ListarCarreras();
+                }
+            }
+            ListarCarreras();
         }
     }
 }
